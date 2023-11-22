@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="./lib/jquery.mobile-1.4.5.min.css" />
+    <script src="./lib/jquery-1.11.1.min.js"></script>
+    <script src="./lib/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=788be55d6347595e46ea70a225bfdb5c&libraries=services"></script>
+    <style>
+      li {
+        list-style: none;
+      }
+      .picture {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .picture li {
+        float: left;
+        width: 50%;
+      }
+      .picture li a {
+        display: block;
+        margin: 5px;
+        border: 1px;
+      }
+      .picture li img {
+        display: block;
+        width: 50%;
+        height: auto;
+      }
+      .picture li img:hover {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div data-theme="b">
+      <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+          <h1>유시스 소개 앱</h1>
+        </div>
+        <div data-role="content" style="text-align: center">
+          <img src="top_logo.png" />
+          <ul data-role="listview" data-inset="true" data-theme="b">
+            <li><a href="#info">정보</a></li>
+            <li><a href="#vidio" data-rel="dialog">소개 영상</a></li>
+            <li><a href="#work-drone" data-rel="dialog">하는일</a></li>
+            <li><a href="#map">오시는길</a></li>
+          </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>송하림</h1>
+        </div>
+      </div>
+
+      <div data-role="page" id="info">
+        <div data-role="header" data-theme="b">
+          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+          <h1>정보</h1>
+        </div>
+        <div data-role="content">
+          <div style="text-align: center">
+            <img src="top_logo.png" />
+          </div>
+          <div
+            data-role="collapsible-set"
+            data-theme="b"
+            data-content-theme="e"
+          >
+            <div data-role="collapsible" data-collapsed="false">
+              <h3>User eXperience Is Special</h3>
+              <p style="text-align: center;">
+              사용자의 경험을 바탕으로 디지털 서비스를 창조해 나아가다<br>
+              2001년 설럽 이후 국내 브랜드, 공공분야 기관·기업들의 온라인 비즈니스 파트너로 돌려온 Uxis<br><br>
+              UX·UI 기반의 시스템개발과 마케팅을 주력으로 하며, 지금까지의 노하우를 바탕으로<br>
+              디지털기발 전략 + 크리에이티브 + 테크놀러지 결합을 통해<br>
+              고객의 가양한 블랜드를 소비자들에게 감동과 즐거움의 경험으로 제시하고 있습니다.
+              </p>
+            </div>
+            <div data-role="collapsible">
+              <h3>Service</h3>
+              <p style="text-align: center;">
+              다양한 현장에서 IoT 기반의 산업안전 및 재난안전 서비스 플랫폼을 제공함으로써<br>
+              고객이 보다 편리하고 안전한 산업활동을 영위할 수 있도록 최선을 다하고 있습니다.<br><br>
+              ㈜유시스는 창립 이래 풍부한 경험과 전문성을 바탕으로 IT인프라 구축에서 어플리케이션 개발에 이르기까지<br>
+              고객 여러분의 곁에서 최적의 솔루션을 제공하고자 끊임없는 가치혁신의 노력을 다하고 있습니다.<br><br>
+              최적의 솔루션을 제공하고자 고객의 상황에 맞는 서비스 플랫폼을 맞춤 제작하여 기존의 업무 프로세스를 유지하면서<br>
+              ㈜유시스의 서비스 플랫폼을 도입할 수 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>송하림</h1>
+        </div>
+      </div>
+
+      <div data-role="page" id="vidio" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+          <h1>소개 영상</h1>
+        </div>
+        <div data-role="content">
+          <div class="ui-bar ui-bar-a">유시스 소개영상</div>
+          <br />
+          <li>
+            <iframe 
+            width = 100% 
+            height = "400" 
+            src="https://www.youtube.com/embed/W78-KbG1lLE?list=TLGGRGtgdxogcisyMjExMjAyMw" 
+            title="유시스 소개영상"
+            frameborder="0" 
+            allow="accelerometer; 
+            autoplay; 
+            clipboard-write; 
+            encrypted-media; 
+            gyroscope; 
+            picture-in-picture;
+            web-share" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div data-role="footer" data-theme="b"></div>
+      </div>
+
+      <div data-role="page" id="work-drone">
+        <div data-role="header">
+          <h1>스마트 드론</h1>
+        </div>
+        <div data-role="content">
+          <img src="drone.jpg" alt="" width="100%" />
+        </div>
+        <div data-role="footer">
+          <a href="#home" data-direction="reverse">이전</a>
+          <a href="#work-city" data-rel="dialog" data-transition="slide"
+            >다음</a
+          >
+        </div>
+      </div>
+
+      <div data-role="page" id="work-city">
+        <div data-role="header">
+          <h1>스마트 시티</h1>
+        </div>
+        <div data-role="content">
+          <img src="city.png" alt="" width="100%" />
+        </div>
+        <div data-role="footer">
+          <a href="#work-drone" data-direction="reverse">이전</a>
+          <a href="#work-factory" data-rel="dialog" data-transition="slide"
+            >다음</a
+          >
+        </div>
+      </div>
+
+      <div data-role="page" id="work-factory">
+        <div data-role="header">
+          <h1>스마트 팩토리</h1>
+        </div>
+        <div data-role="content">
+          <img src="factory.png" alt="" width="100%" />
+        </div>
+        <div data-role="footer">
+          <a href="#work-city" data-direction="reverse">이전</a>
+          <a href="#home">처음</a>
+        </div>
+      </div>
+
+      <div data-role="page" id="map" data-theme="b">
+        <div data-role="header" data-position="fixed" data-theme="b">
+          <a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+          <h1>오시는길</h1>
+        </div>
+        <div data-role="content">
+          <div id="map" style="width:100%;height:100%;"></div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+          <h1>송하림</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+          mapOption = {
+              center: new kakao.maps.LatLng(35.14662325360049, 129.0659101707037), // 지도의 중심좌표
+              level: 3 // 지도의 확대 레벨
+          };  
+
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+          mapOption = { 
+              center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+              level: 3 // 지도의 확대 레벨
+          };
+
+      // 지도를 생성합니다    
+      var map = new kakao.maps.Map(mapContainer, mapOption); 
+    </script>
+  </body>
+</html>
